@@ -15,6 +15,6 @@ jobs:
       - name: Assign Reviewer
         run: |
           # Your Python script to assign reviewers goes here
-          python .github/scripts/assign_reviewer.py
+          python .github/design/scripts/assign_reviewer.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
