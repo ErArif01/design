@@ -1,0 +1,20 @@
+name: Pull Request Review Rotation
+
+on:
+  schedule:
+    - cron: '* * * * 1'  # Run every Monday at midnight
+
+jobs:
+  assign_reviewer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Assign Reviewer
+        run: |
+          # Your Python script to assign reviewers goes here
+          python .github/scripts/assign_reviewer.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
