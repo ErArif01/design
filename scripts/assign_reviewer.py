@@ -28,7 +28,7 @@ def main():
     rotation_interval_weeks = 1
 
     # Get the repository
-    repo = g.get_repo("your-username/your-repo")
+    repo = g.get_repo("ErArif01/design")
 
     # Create the rotation schedule
     schedule = create_rotation_schedule(team_members, rotation_interval_weeks)
